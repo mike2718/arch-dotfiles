@@ -147,7 +147,7 @@ export PAGER="/usr/bin/less"
 export GOPROXY="https://goproxy.io,direct"
 
 # rar默认压缩参数
-export RAR='-m5 -rr5 -s -md128 -ol'
+#export RAR='-m5 -rr5 -s -md128 -ol'
 
 # 刻录用
 export MKISOFS="xorrisofs"
