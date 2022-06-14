@@ -3,8 +3,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-#PS1='[\u@\h \W]\$ '
-
 # 自己添加
 PS1="\[\e[0;36m\]\u\[\e[36m\]@\[\e[36m\]\h\[\e[36m\]: \[\e[36m\]\w \[\e[36m\][\[\e[36m\]$(/usr/bin/date +'%Y/%-m/%-d %-H:%M %A, %-d %B %Y')\[\e[36m\]]\n\[\e[36m\](\[\e[36m\]$?\[\e[36m\]) \[\e[36m\]\$ \[\e[0m\]"
 export PS1
@@ -91,7 +89,7 @@ mvr() {
 }
 
 # git快捷命令
-alias gitsocks='git -c http.proxy=socks5://127.0.0.1:7891'
+alias gitsocks='git -c http.proxy=socks5://127.0.0.1:7890'
 alias g='git'
 alias gs='git status'
 alias gb='git branch'
@@ -139,9 +137,10 @@ export PAGER="/usr/bin/less"
 # curl的代理只用这些环境变量
 #export http_proxy="http://127.0.0.1:7890"
 #export HTTPS_PROXY="http://127.0.0.1:7890"
-# 代理
+# 其他代理
 #export https_proxy="http://127.0.0.1:7890"
 #export HTTP_PROXY="${http_proxy}"
+# go语言用代理？
 export GOPROXY="https://goproxy.io,direct"
 
 # rar默认压缩参数
