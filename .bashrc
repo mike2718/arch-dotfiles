@@ -171,6 +171,7 @@ alias diff='diff -rauN --color=auto'
 #alias diff='git diff --no-index --color-words'
 alias ip='ip --color=auto'
 alias fdisk='fdisk --color'
+alias curl='curl --remove-on-error'
 
 # gnupg tty
 GPG_TTY=$(tty)
