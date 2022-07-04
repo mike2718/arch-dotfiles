@@ -4,7 +4,7 @@
 [[ $- != *i* ]] && return
 
 # 自己添加
-PS1="\[\e[0;36m\]\u\[\e[36m\]@\[\e[36m\]\h\[\e[36m\]: \[\e[36m\]\w \[\e[36m\][\[\e[36m\]$(/usr/bin/date +'%Y/%-m/%-d %-H:%M %A, %-d %B %Y')\[\e[36m\]]\n\[\e[36m\](\[\e[36m\]$?\[\e[36m\]) \[\e[36m\]\$ \[\e[0m\]"
+export PS1="\u@\h: \w [\A \d]\n(\$?) \\$ \[$(tput sgr0)\]"
 export PS1
 
 if [[ $UID -ge 1000 && -d $HOME/bin && -z $(echo "$PATH" | grep -o "$HOME/bin") ]]; then
