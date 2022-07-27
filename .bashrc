@@ -153,7 +153,7 @@ export MKISOFS="xorrisofs"
 export CDR_SPEED=1
 
 # zip默认压缩参数
-export ZIPOPT='-9'
+#export ZIPOPT='-9'
 
 # 自用
 alias ls='ls -h -l --color=auto --time-style=+"%Y-%m-%d %H:%M"'
