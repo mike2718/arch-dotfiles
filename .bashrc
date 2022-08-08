@@ -24,9 +24,12 @@ complete -cf sudo
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
+export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 export HISTFILESIZE=20000
+export HISTIGNORE='history:pwd:ls:ls *:ll:w:top:df *'      # 保存しないコマンド
+export PROMPT_COMMAND='history -a; history -c; history -r' # 履歴のリアルタイム反映
 
 # Mimic Zsh run-help ability
 run-help() { help "$READLINE_LINE" 2>/dev/null || man "$READLINE_LINE"; }
