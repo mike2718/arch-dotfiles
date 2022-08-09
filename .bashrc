@@ -5,7 +5,7 @@
 
 # 自己添加
 # PS1="\u@\h: \w [\A \d]\n(\$?) \\$ \[$(tput sgr0)\]"
-PS1="\[\033[01;33m\]\u@\H: \w [\D{%R %A,%e %B %Y (%Z)}]\n(\$?) \\$\[\033[0m\] \[$(tput sgr0)\]"
+PS1="\[\033[01;33m\]\u@\H: \w [\D{%R %A,%e %B %Y}]\n(\$?) \\$ \[\033[0m\]\[$(tput sgr0)\]"
 export PS1
 
 if [[ $UID -ge 1000 && -d $HOME/bin && -z $(echo "$PATH" | grep -o "$HOME/bin") ]]; then
