@@ -8,7 +8,3 @@
 	defaultBranch = main
 [commit]
 	gpgsign = true
-
-[http "https://github.com"]
-	proxy = http://127.0.0.1:7890
-	sslVerify = false

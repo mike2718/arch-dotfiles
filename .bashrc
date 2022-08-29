@@ -28,7 +28,7 @@ export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 export HISTFILESIZE=20000
-export HISTIGNORE='history:pwd:ls:ls *:ll:w:top:df *'      # 保存しないコマンド
+export HISTIGNORE='history:pwd:ls:ls *:ll:w:top:df *:clear'      # 保存しないコマンド
 export PROMPT_COMMAND='history -a; history -c; history -r' # 履歴のリアルタイム反映
 
 # Mimic Zsh run-help ability
@@ -145,8 +145,8 @@ export PAGER="/usr/bin/less"
 # 其他代理
 #export https_proxy="http://127.0.0.1:7890"
 #export HTTP_PROXY="${http_proxy}"
-# go语言用代理？
-export GOPROXY="https://goproxy.io,direct"
+# go语言用代理
+#export GOPROXY="https://goproxy.io,direct"
 
 # rar默认压缩参数
 #export RAR='-m5 -rr5 -s -md128 -ol'
