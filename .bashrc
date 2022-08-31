@@ -125,7 +125,6 @@ alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias ping4='ping -4'
 alias ping6='ping -6'
 alias vi='nvi'
-alias vim='nvim'
 
 # gpg
 alias gpglk='gpg --list-keys --keyid-format=long'
