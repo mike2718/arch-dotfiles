@@ -28,13 +28,13 @@ export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 export HISTFILESIZE=20000
-export HISTIGNORE='history:pwd:ls:ls *:ll:w:top:df *:clear'      # 保存しないコマンド
+#export HISTIGNORE='history:pwd:ls:ls *:ll:w:top:df *:clear'      # 保存しないコマンド
 export PROMPT_COMMAND='history -a; history -c; history -r' # 履歴のリアルタイム反映
 
 # Mimic Zsh run-help ability
-run-help() { help "$READLINE_LINE" 2>/dev/null || man "$READLINE_LINE"; }
-bind -m vi-insert -x '"\eh": run-help'
-bind -m emacs -x     '"\eh": run-help'
+#run-help() { help "$READLINE_LINE" 2>/dev/null || man "$READLINE_LINE"; }
+#bind -m vi-insert -x '"\eh": run-help'
+#bind -m emacs -x     '"\eh": run-help'
 
 # Disable Ctrl+z in terminal
 trap "" SIGTSTP
