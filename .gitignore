@@ -2,6 +2,7 @@
 .lesshst
 .viminfo
 .ssh/
+.gnupg/
 .cache/
 .local/
 .config/

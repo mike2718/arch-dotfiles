@@ -8,15 +8,6 @@
 PS1="\[\033[01;33m\]\u@\H: \w [\D{%R %A,%e %B %Y}]\n(\$?) \\$ \[\033[0m\]\[$(tput sgr0)\]"
 export PS1
 
-if [[ $UID -ge 1000 && -d $HOME/bin && -z $(echo "$PATH" | grep -o "$HOME/bin") ]]; then
-    export PATH=$HOME/bin:${PATH}
-fi
-if [[ $UID -ge 1000 && -d $HOME/.local/bin && -z $(echo "$PATH" | grep -o "$HOME/.local/bin") ]]; then
-    export PATH=$HOME/.local/bin:${PATH}
-fi
-export PATH=$PATH:/usr/local/lib
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-
 # tab自动完成文件名和命令
 complete -cf sudo
 
@@ -76,10 +67,9 @@ alias pcc='pcc -Wall -Wpedantic -Wextra -std=c99'
 alias gcc='gcc -Wall -Wpedantic -Wextra -std=c99'
 alias clang='clang -Wall -Wpedantic -Wextra -std=c99'
 alias 7zip='7za a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on'
-#alias dd='dd conv=fsync oflag=direct status=progress'
+alias dd='dd status=progress'
 alias poweroff='sudo shutdown -P now'
 alias reboot='sudo shutdown -r now'
-alias hwinfo='hwinfo --short --cpu --disk --listmd --gfxcard --wlan --printer'
 alias L='|$PAGER'
 alias N='>/dev/null 2>&1'
 alias N1='>/dev/null'
@@ -132,31 +122,6 @@ alias gpglsk='gpg --list-secret-keys --keyid-format=long'
 alias gpge='gpg --encrypt --recipient 14F27367B1323515B1F61A815BDC731777049B5F'
 alias gpgd='gpg --decrypt'
 
-# 默认编辑器
-export VISUAL="/usr/bin/nvim"
-export EDITOR="/usr/bin/nvim"
-export SUDO_EDITOR="/usr/bin/nvim"
-export PAGER="/usr/bin/less"
-
-# curl的代理只用这些环境变量
-#export http_proxy="http://127.0.0.1:7890"
-#export HTTPS_PROXY="http://127.0.0.1:7890"
-# 其他代理
-#export https_proxy="http://127.0.0.1:7890"
-#export HTTP_PROXY="${http_proxy}"
-# go语言用代理
-#export GOPROXY="https://goproxy.io,direct"
-
-# rar默认压缩参数
-#export RAR='-m5 -rr5 -s -md128 -ol'
-
-# 刻录用
-export MKISOFS="xorrisofs"
-# 强制cdrecord使用最低写入速度写入cd
-export CDR_SPEED=1
-
-# zip默认压缩参数
-#export ZIPOPT='-9'
 
 # 自用
 alias ls='ls -h -l --color=auto --time-style=+"%Y-%m-%d %H:%M"'
@@ -181,7 +146,7 @@ alias curl='curl --remove-on-error'
 GPG_TTY=$(tty)
 export GPG_TTY
 
-umask 002
+umask 0022
 
 # direnv钩子
 eval "$(direnv hook bash)"
