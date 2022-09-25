@@ -1,3 +1,7 @@
 .bash_history
-.ssh
-.cache
+.lesshst
+.viminfo
+.ssh/
+.cache/
+.local/
+.config/
