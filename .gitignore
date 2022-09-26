@@ -1,8 +1,12 @@
 .bash_history
 .lesshst
 .viminfo
+.xsession-errors
+.xsession-errors.old
 .ssh/
 .gnupg/
 .cache/
 .local/
 .config/
+bin
+dev

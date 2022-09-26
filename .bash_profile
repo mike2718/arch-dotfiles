@@ -9,8 +9,12 @@
 # shellcheck source=.bash_profile
 #source ~/.bashrc
 #source ~/.bash_login
-export PATH="/home/mike/bin:/usr/local/lib:${PATH}"
+
+source /usr/share/clang/bash-autocomplete.sh
+
+export PATH="/home/mike/bin:/usr/local/bin:${PATH}"
 export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
+
 export TERM="xterm-256color"
 
 export XDG_CONFIG_HOME="${HOME}/.config"
