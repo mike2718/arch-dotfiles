@@ -36,11 +36,10 @@ export MKISOFS="xorrisofs"
 export CDR_SPEED=1
 
 # zip默认压缩参数
-export ZIPOPT='-9'
+#export ZIPOPT='-9'
 
 # rar默认压缩参数
 #export RAR='-m5 -rr5 -s -md128 -ol'
-export RAR='-m5 -rr5'
 
 # curl的代理只用这些环境变量
 #export http_proxy="http://127.0.0.1:7890"
