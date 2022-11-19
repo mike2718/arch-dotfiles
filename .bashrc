@@ -1,9 +1,11 @@
-#!/usr/bin/bash
 #
-# If not running interactively, don't do anything
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything#
 [[ $- != *i* ]] && return
 
-# 自己添加
+#### 以下自己添加
 # PS1="\u@\h: \w [\A \d]\n(\$?) \\$ \[$(tput sgr0)\]"
 PS1='\[\033[01;32m\]\u@\h\[\033[00m\]: \[\033[01;34m\]\w [\D{%R %A,%e %B %Y}]\n($?) \$\[\033[00m\] '
 export PS1
