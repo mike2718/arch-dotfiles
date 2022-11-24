@@ -8,3 +8,7 @@
 	defaultBranch = main
 [commit]
 	gpgsign = true
+[http "https://github.com"]
+	sslVerify = false
+[http "https://pypi.org"]
+	sslVerify = false
