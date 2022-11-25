@@ -24,9 +24,9 @@ export GOPATH="${XDG_DATA_HOME}/go"
 export TZ=":/usr/share/zoneinfo/Asia/Shanghai"
 SHELL="/usr/bin/bash"
 
-export VISUAL=nvim
-[ -n "$DISPLAY" ] && export EDITOR="/usr/bin/scite" || export EDITOR="/usr/bin/nvim"
-export SUDO_EDITOR="/usr/bin/nvim"
+export VISUAL="/usr/bin/vim"
+[ -n "$DISPLAY" ] && export EDITOR="/usr/bin/scite" || export EDITOR="/usr/bin/vim"
+export SUDO_EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
 [ -n "$DISPLAY" ] && export BROWSER=firefox || export BROWSER=links
 
