@@ -1,52 +1,36 @@
-#
-# ~/.bashrc
-#
+# 自动完成
+autoload -Uz compinit promptinit
+compinit
+promptinit
 
-# If not running interactively, don't do anything#
-[[ $- != *i* ]] && return
+zstyle ':completion:*' menu select
+zstyle ':completion::complete:*' gain-privileges 1
 
-#### 以下自己添加
-# PS1="\u@\h: \w [\A \d]\n(\$?) \\$ \[$(tput sgr0)\]"
-PS1='\[\033[01;32m\]\u@\h\[\033[00m\]: \[\033[01;34m\]\w [\D{%R %A,%e %B %Y}]\n($?) \$\[\033[00m\] '
-export PS1
+# This will set the default prompt to the walters theme
+prompt walters
+
+PROMPT='%F{2}%n%f@%F{5}%m%f %F{4}%B%~%b%f %# '
+RPROMPT='[%F{3}%?%f]'
+
+#PS1="\u@\h: \w [\A \d]\n(\$?) \\$ \[$(tput sgr0)\]"
+#export PS1
 
 # tab自动完成文件名和命令
-complete -cf sudo
+#complete -cf sudo
 
 # 用上下键历史记录自动完成
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+#bind '"\e[A": history-search-backward'
+#bind '"\e[B": history-search-forward'
 
-export HISTTIMEFORMAT='%F %T '
-export HISTCONTROL=erasedups
-export HISTSIZE=10000
-export HISTFILESIZE=20000
+#export HISTTIMEFORMAT='%F %T '
+#export HISTCONTROL=erasedups
+#export HISTSIZE=10000
+#export HISTFILESIZE=20000
 #export HISTIGNORE='history:pwd:ls:ls *:ll:w:top:df *:clear'      # 保存しないコマンド
-export PROMPT_COMMAND='history -a; history -c; history -r' # 履歴のリアルタイム反映
+#export PROMPT_COMMAND='history -a; history -c; history -r' # 履歴のリアルタイム反映
 
-# Mimic Zsh run-help ability
-#run-help() { help "$READLINE_LINE" 2>/dev/null || man "$READLINE_LINE"; }
-#bind -m vi-insert -x '"\eh": run-help'
-#bind -m emacs -x     '"\eh": run-help'
+ttyctl -f
 
-# Disable Ctrl+z in terminal
-trap "" SIGTSTP
-
-# Auto "cd" when entering just a path
-shopt -s autocd
-
-# Prevent overwrite of files
-set -o noclobber
-
-# Line wrap on window resize
-shopt -s checkwinsize
-
-# Shell exits even if ignoreeof set
-export IGNOREEOF=100
-
-#「Ctrl+S」を無効化する
-stty stop undef
-stty start undef
 
 # 自用命令别名
 alias c='clear'
@@ -137,11 +121,10 @@ alias curl='curl --remove-on-error'
 GPG_TTY=$(tty)
 export GPG_TTY
 
+# umask
 umask 0022
 
-# direnv钩子
-eval "$(direnv hook bash)"
-
-
+# direnv hook
+eval "$(direnv hook zsh)"
 
 # vim: set et sw=4 sts=4 tw=80 ft=sh:
