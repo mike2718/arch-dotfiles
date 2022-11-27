@@ -1,4 +1,5 @@
-# 自动完成
+#
+
 autoload -Uz compinit promptinit
 compinit
 promptinit
@@ -7,27 +8,10 @@ zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
 
 # This will set the default prompt to the walters theme
-prompt walters
+#prompt walters
 
-PROMPT='%F{2}%n%f@%F{5}%m%f %F{4}%B%~%b%f %# '
-RPROMPT='[%F{3}%?%f]'
-
-#PS1="\u@\h: \w [\A \d]\n(\$?) \\$ \[$(tput sgr0)\]"
-#export PS1
-
-# tab自动完成文件名和命令
-#complete -cf sudo
-
-# 用上下键历史记录自动完成
-#bind '"\e[A": history-search-backward'
-#bind '"\e[B": history-search-forward'
-
-#export HISTTIMEFORMAT='%F %T '
-#export HISTCONTROL=erasedups
-#export HISTSIZE=10000
-#export HISTFILESIZE=20000
-#export HISTIGNORE='history:pwd:ls:ls *:ll:w:top:df *:clear'      # 保存しないコマンド
-#export PROMPT_COMMAND='history -a; history -c; history -r' # 履歴のリアルタイム反映
+export PROMPT='%F{2}%n%f@%F{5}%m%f %F{4}%B%~%b%f %# '
+export RPROMPT='[%F{3}%?%f]'
 
 ttyctl -f
 
@@ -126,5 +110,6 @@ umask 0022
 
 # direnv hook
 eval "$(direnv hook zsh)"
+
 
 # vim: set et sw=4 sts=4 tw=80 ft=sh:
