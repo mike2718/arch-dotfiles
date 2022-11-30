@@ -13,15 +13,12 @@ export VISUAL="/usr/bin/vim"
 [ -n "$DISPLAY" ] && export EDITOR="/usr/bin/scite" || export EDITOR="/usr/bin/vim"
 export SUDO_EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
-[ -n "$DISPLAY" ] && export BROWSER=google-chrome-stable || export BROWSER=w3m
+[ -n "$DISPLAY" ] && export BROWSER=google-chrome-stable || export BROWSER=links
 
 # xorrisofs刻录用
-export MKISOFS="xorrisofs"
-# 强制xorrisofs使用最低写入速度写入
+#export MKISOFS="xorrisofs"
+# 强制cdrecord/xorrisofs用最低速度写入，同-speed选项
 export CDR_SPEED=1
-
-# rar默认压缩参数
-#export RAR='-m5 -rr5 -s -md64 -ol'
 
 # curl proxy
 #export http_proxy="http://127.0.0.1:7890"
