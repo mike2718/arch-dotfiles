@@ -18,7 +18,7 @@ export PAGER="/usr/bin/less"
 # xorrisofs刻录用
 #export MKISOFS="xorrisofs"
 # 强制cdrecord/xorrisofs用最低速度写入，同-speed选项
-export CDR_SPEED=1
+export CDR_SPEED=0
 
 # curl proxy
 #export http_proxy="http://127.0.0.1:7890"
