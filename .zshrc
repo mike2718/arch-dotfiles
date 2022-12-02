@@ -14,15 +14,12 @@ export PROMPT='%F{2}%n%f@%F{5}%m%f %F{4}%B%~%b%f %# '
 export RPROMPT='[%F{3}%?%f]'
 
 # 履歴ファイルの保存先
-export HISTFILE=${HOME}/.zsh_history
+export HISTFILE=~/.zsh_history
 # メモリに保存される履歴の件数
-export HISTSIZE=1000
+export HISTSIZE=20000
 # 履歴ファイルに保存される履歴の件数
-export SAVEHIST=100000
-# 重複を記録しない
-setopt hist_ignore_dups
-# 開始と終了を記録
-setopt EXTENDED_HISTORY
+export SAVEHIST=20000
+export HISTCONTROL=ignoredups
 
 ttyctl -f
 

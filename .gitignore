@@ -1,4 +1,5 @@
 .bash_history
+.zsh_history
 .lesshst
 .viminfo
 .xsession-errors
@@ -8,5 +9,4 @@
 .cache/
 .local/
 .config/
-bin
-dev
+bin/
