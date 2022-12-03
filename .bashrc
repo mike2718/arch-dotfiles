@@ -1,13 +1,11 @@
-#
-# ~/.bashrc
-#
+#!/usr/bin/bash
 
 # If not running interactively, don't do anything#
 [[ $- != *i* ]] && return
 
 #### 以下自己添加
-# PS1="\u@\h: \w [\A \d]\n(\$?) \\$ \[$(tput sgr0)\]"
-PS1='\[\033[01;32m\]\u@\h\[\033[00m\]: \[\033[01;34m\]\w [\D{%R %A,%e %B %Y}]\n($?) \$\[\033[00m\] '
+#PS1='\[\033[01;32m\]\u@\h\[\033[00m\]: \[\033[01;34m\]\w [\D{%R %A,%e %B %Y}]\n($?) \$\[\033[00m\] '
+PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\h \[$(tput sgr0)\]\[\033[38;5;6m\]\w\[$(tput sgr0)\] [\$?] \\$ \[$(tput sgr0)\]"
 export PS1
 
 # tab自动完成文件名和命令
