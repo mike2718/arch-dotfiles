@@ -4,8 +4,8 @@
 [[ $- != *i* ]] && return
 
 #### 以下自己添加
-#PS1='\[\033[01;32m\]\u@\h\[\033[00m\]: \[\033[01;34m\]\w [\D{%R %A,%e %B %Y}]\n($?) \$\[\033[00m\] '
 PS1="\[\033[38;5;66m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;96m\]\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;65m\]\w\[$(tput sgr0)\] [\[$(tput sgr0)\]\[\033[38;5;208m\]\$?\[$(tput sgr0)\]] \\$ \[$(tput sgr0)\]"
+PS1="`printf "%${COLUMNS}s\n" "$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/') $(\date +'%-Y/%-m/%-d %-H:%M')"`$PS1"
 export PS1
 
 # tab自动完成文件名和命令
@@ -113,7 +113,7 @@ alias gpgd='gpg --decrypt'
 
 
 # 自用
-alias ls='ls -h -l --color=auto --time-style=+"%Y-%m-%d %H:%M"'
+alias ls='ls -h -l --color=auto --time-style=+"%Y/%m/%d %H:%M"'
 alias l='ls -CF --color=auto'
 alias lh='ls -lh --color=auto'
 alias ll='ls -l --color=auto'
