@@ -136,7 +136,7 @@ alias curl='curl --remove-on-error'
 GPG_TTY=$(tty)
 export GPG_TTY
 
-umask 0022
+umask 022
 
 # direnv钩子
 eval "$(direnv hook bash)"
