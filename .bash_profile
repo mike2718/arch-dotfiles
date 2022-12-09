@@ -18,6 +18,7 @@ SHELL="/usr/bin/bash"
 export VISUAL="/usr/bin/vim"
 export SUDO_EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
+export LESS='-R --use-color -Dd+r$Du+b'
 #[ -n "$DISPLAY" ] && export EDITOR="/usr/bin/scite" || export EDITOR="/usr/bin/vim"
 if [ -n "$DISPLAY" ]; then
     export EDITOR="/usr/bin/scite"

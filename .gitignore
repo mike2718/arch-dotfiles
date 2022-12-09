@@ -4,6 +4,7 @@
 .viminfo
 .xsession-errors
 .xsession-errors.old
+.aMule/
 .ssh/
 .gnupg/
 .cache/

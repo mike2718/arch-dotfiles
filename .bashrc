@@ -8,6 +8,8 @@
 PS1="\[\033[38;5;66m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;96m\]\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;65m\]\w\[$(tput sgr0)\] (\[$(tput sgr0)\]\[\033[38;5;208m\]\$?\[$(tput sgr0)\]) \\$ \[$(tput sgr0)\]"
 #PS1="`printf "%${COLUMNS}s\n" "$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/') $(\date +'%-Y/%-m/%-d %-H:%M')"`$PS1"
 export PS1
+PS2="---->"
+export PS2
 
 # tab自动完成文件名和命令
 complete -cf sudo
@@ -19,14 +21,7 @@ bind '"\e[B": history-search-forward'
 export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
-export HISTFILESIZE=20000
-#export HISTIGNORE='history:pwd:ls:ls *:ll:w:top:df *:clear'      # 保存しないコマンド
 export PROMPT_COMMAND='history -a; history -c; history -r' # 履歴のリアルタイム反映
-
-# Mimic Zsh run-help ability
-#run-help() { help "$READLINE_LINE" 2>/dev/null || man "$READLINE_LINE"; }
-#bind -m vi-insert -x '"\eh": run-help'
-#bind -m emacs -x     '"\eh": run-help'
 
 # Disable Ctrl+z in terminal
 trap "" SIGTSTP
@@ -123,8 +118,6 @@ alias l.='ls -d .* --color=auto'
 alias dir='ls -ba'
 alias cal='cal -S -m --color=auto'
 alias grep='grep --color=auto -i'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 alias diff='diff -rauN --color=auto'
 # 使用单词级别比较的diff
 #alias diff='git diff --no-index --color-words'
