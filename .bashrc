@@ -129,6 +129,13 @@ alias curl='curl --remove-on-error'
 GPG_TTY=$(tty)
 export GPG_TTY
 
+function path(){
+    old=$IFS
+    IFS=:
+    printf "%s\n" $PATH
+    IFS=$old
+}
+
 umask 022
 
 # direnv钩子

@@ -12,8 +12,10 @@
 	defaultBranch = main
 [commit]
 	gpgsign = true
-[http "https://pypi.org"]
-	sslVerify = false
-[http "https://github.com"]
-	sslVerify = false
-	proxy = http://127.0.0.1:7890
+#[http "https://pypi.org"]
+#	sslVerify = false
+#[http "https://github.com"]
+#	sslVerify = false
+#	proxy = http://127.0.0.1:7890
+[http]
+	version = HTTP/1.1

@@ -1,19 +1,18 @@
 #!/usr/bin/bash
 # shellcheck source=.bash_profile
-#
 . /usr/share/clang/bash-autocomplete.sh
 
-export PATH="/home/mike/bin:/usr/local/bin:${PATH}"
-export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
+PATH="/home/mike/amule/bin:/home/mike/bin:/usr/local/bin:${PATH}"; export PATH
+
+LD_LIBRARY_PATH="/home/mike/dev/wxWidgets-3.0.5/lib:/usr/local/lib:${LD_LIBRARY_PATH}"; export D_LIBRARY_PATH
 
 export TERM="xterm-256color"
 
-export XDG_CONFIG_HOME="${HOME}/.config"
+#export XDG_CONFIG_HOME="${HOME}/.config"
 export GOPATH="${XDG_DATA_HOME}/go"
 
 #TZ='Asia/Shanghai'; export TZ
 export TZ=":/usr/share/zoneinfo/Asia/Shanghai"
-SHELL="/usr/bin/bash"
 
 export VISUAL="/usr/bin/vim"
 export SUDO_EDITOR="/usr/bin/vim"
