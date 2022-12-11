@@ -8,8 +8,6 @@
 PS1="\[\033[38;5;66m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;96m\]\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;65m\]\w\[$(tput sgr0)\] (\[$(tput sgr0)\]\[\033[38;5;208m\]\$?\[$(tput sgr0)\]) \\$ \[$(tput sgr0)\]"
 #PS1="`printf "%${COLUMNS}s\n" "$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/') $(\date +'%-Y/%-m/%-d %-H:%M')"`$PS1"
 export PS1
-PS2="---->"
-export PS2
 
 # tab自动完成文件名和命令
 complete -cf sudo
@@ -48,8 +46,6 @@ alias s='sync'
 alias e='exit'
 alias a='awk'
 alias g='grep'
-alias 7z='7zz'
-alias 7za='7zz'
 alias rm='rm -f'
 alias bc='bc -ql'
 alias cp='rsync --archive --compress -hh --info=stats1,progress2 --modify-window=1'
@@ -94,12 +90,8 @@ alias gst='git stash'
 alias gsl='git stash list'
 alias gsu='git stash -u'
 alias gsp='git stash pop'
-
 alias lftp='lftp -u mike,123456 192.168.50.9'
-alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
-alias ping4='ping -4'
-alias ping6='ping -6'
-alias vi='nvi'
+alias vi='vim'
 
 # gpg
 alias gpglk='gpg --list-keys --keyid-format=long'

@@ -2,9 +2,10 @@
 # shellcheck source=.bash_profile
 . /usr/share/clang/bash-autocomplete.sh
 
-PATH="/home/mike/amule/bin:/home/mike/bin:/usr/local/bin:${PATH}"; export PATH
+#PATH="/home/mike/amule/bin:/home/mike/bin:/usr/local/bin:${PATH}"
+PATH="/home/mike/amule/bin:/home/mike/bin:${PATH}"
 
-LD_LIBRARY_PATH="/home/mike/dev/wxWidgets-3.0.5/lib:/usr/local/lib:${LD_LIBRARY_PATH}"; export D_LIBRARY_PATH
+export LD_LIBRARY_PATH="/home/mike/dev/wxWidgets-3.0.5/lib:/usr/local/lib:${LD_LIBRARY_PATH}"
 
 export TERM="xterm-256color"
 
@@ -32,12 +33,12 @@ else
 fi
 
 # xorrisofs刻录用
-export MKISOFS="xorrisofs"
+MKISOFS="xorrisofs"
 # 强制xorrisofs使用最低写入速度写入
-export CDR_SPEED=1
+CDR_SPEED=1
 
 # rar默认压缩参数
-#export RAR='-m5 -rr5 -s -md128 -ol'
+#RAR='-m5 -rr5 -s -md128 -ol'
 
 # curl的代理只用这些环境变量
 #export http_proxy="http://127.0.0.1:7890"
@@ -46,9 +47,10 @@ export CDR_SPEED=1
 #export https_proxy="http://127.0.0.1:7890"
 #export HTTP_PROXY="${http_proxy}"
 
-export INFODIR="/usr/share/info:/usr/local/share/info"
+INFODIR="/usr/share/info:/usr/local/share/info"
 
 #[[ -f ~/.bashrc ]] && . ~/.bashrc
 #[[ -f ~/.bash_login ]] && . ~/.bash_login
 if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 if [ -f ~/.bash_login ]; then . ~/.bash_login; fi
+
