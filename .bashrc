@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # shellcheck source=.bashrc
 
 # If not running interactively, don't do anything#
@@ -18,7 +18,7 @@ bind '"\e[B": history-search-forward'
 
 export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=erasedups
-export HISTSIZE=10000
+export HISTSIZE=20000
 export PROMPT_COMMAND='history -a; history -c; history -r' # 履歴のリアルタイム反映
 
 # Disable Ctrl+z in terminal
@@ -29,9 +29,6 @@ shopt -s autocd
 
 # Prevent overwrite of files
 set -o noclobber
-
-# Line wrap on window resize
-shopt -s checkwinsize
 
 # Shell exits even if ignoreeof set
 export IGNOREEOF=100
@@ -129,6 +126,8 @@ function path(){
 }
 
 umask 022
+
+RANDOM=$(head /dev/random | tr -dc '[:digit:]' | head -c5)
 
 # direnv钩子
 eval "$(direnv hook bash)"

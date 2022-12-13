@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # shellcheck source=.bash_profile
 . /usr/share/clang/bash-autocomplete.sh
 
