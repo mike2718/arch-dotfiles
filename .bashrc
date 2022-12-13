@@ -127,7 +127,7 @@ function path(){
 
 umask 022
 
-RANDOM=$(head /dev/random | tr -dc '[:digit:]' | head -c5)
+RANDOM=$(od -vAn -N2 -tu2 < /dev/urandom)
 
 # direnv钩子
 eval "$(direnv hook bash)"

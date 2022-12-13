@@ -1,19 +1,21 @@
 #!/bin/bash
 # shellcheck source=.bash_profile
-. /usr/share/clang/bash-autocomplete.sh
+#
+#. /usr/share/clang/bash-autocomplete.sh
 
 #PATH="/home/mike/amule/bin:/home/mike/bin:/usr/local/bin:${PATH}"
 PATH="/home/mike/amule/bin:/home/mike/bin:${PATH}"
 
-export LD_LIBRARY_PATH="/home/mike/dev/wxWidgets-3.0.5/lib:/usr/local/lib:${LD_LIBRARY_PATH}"
+LD_LIBRARY_PATH="/home/mike/dev/wxWidgets-3.0.5/lib:/usr/local/lib:${LD_LIBRARY_PATH}"
 
 export TERM="xterm-256color"
 
 #export XDG_CONFIG_HOME="${HOME}/.config"
-export GOPATH="${XDG_DATA_HOME}/go"
+#export GOPATH="${XDG_DATA_HOME}/go"
 
 #TZ='Asia/Shanghai'; export TZ
-export TZ=":/usr/share/zoneinfo/Asia/Shanghai"
+TZ=":/usr/share/zoneinfo/Asia/Shanghai"
+export TZ
 
 export VISUAL="/usr/bin/vim"
 export SUDO_EDITOR="/usr/bin/vim"
@@ -27,9 +29,11 @@ else
 fi
 #[ -n "$DISPLAY" ] && export BROWSER=firefox || export BROWSER=links
 if [ -n "$DISPLAY" ]; then
-    export BROWSER=firefox
+    BROWSER=firefox
+    export BROWSER
 else
-    export BROWSER=links
+    BROWSER=links
+    export BROWSER
 fi
 
 # xorrisofs刻录用
@@ -38,7 +42,7 @@ MKISOFS="xorrisofs"
 CDR_SPEED=1
 
 # rar默认压缩参数
-#RAR='-m5 -rr5 -s -md128 -ol'
+#RAR='-m5 -rr5 -s -md64 -ol'
 
 # curl的代理只用这些环境变量
 #export http_proxy="http://127.0.0.1:7890"
@@ -47,7 +51,7 @@ CDR_SPEED=1
 #export https_proxy="http://127.0.0.1:7890"
 #export HTTP_PROXY="${http_proxy}"
 
-INFODIR="/usr/share/info:/usr/local/share/info"
+#INFODIR="/usr/share/info:/usr/local/share/info"
 
 #[[ -f ~/.bashrc ]] && . ~/.bashrc
 #[[ -f ~/.bash_login ]] && . ~/.bash_login
