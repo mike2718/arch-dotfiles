@@ -8,7 +8,10 @@ PATH="/home/mike/amule/bin:/home/mike/bin:${PATH}"
 
 LD_LIBRARY_PATH="/home/mike/dev/wxWidgets-3.0.5/lib:/usr/local/lib:${LD_LIBRARY_PATH}"
 
-export TERM="xterm-256color"
+LANG=en_US.UTF-8
+export LANG
+
+TERM="xterm-256color"
 
 #export XDG_CONFIG_HOME="${HOME}/.config"
 #export GOPATH="${XDG_DATA_HOME}/go"
@@ -40,6 +43,8 @@ fi
 MKISOFS="xorrisofs"
 # 强制xorrisofs使用最低写入速度写入
 CDR_SPEED=1
+
+RANDOM=$(od -vAn -N2 -tu2 < /dev/urandom)
 
 # rar默认压缩参数
 #RAR='-m5 -rr5 -s -md64 -ol'

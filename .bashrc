@@ -62,7 +62,7 @@ alias N1='>/dev/null'
 alias N2='2>/dev/null'
 
 # git命令
-alias g='git'
+#alias g='git'
 alias gs='git status'
 alias gb='git branch'
 alias gc='git checkout'
@@ -114,7 +114,7 @@ alias ip='ip --color=auto'
 alias fdisk='fdisk --color'
 alias curl='curl --remove-on-error'
 
-# gnupg tty
+# gnupg
 GPG_TTY=$(tty)
 export GPG_TTY
 
@@ -126,8 +126,6 @@ function path(){
 }
 
 umask 022
-
-RANDOM=$(od -vAn -N2 -tu2 < /dev/urandom)
 
 # direnv钩子
 eval "$(direnv hook bash)"
