@@ -6,8 +6,6 @@
     command = xz -c
 [tar "tar.zst"]
     command = zstd -c
-[pull]
-	ff = only
 [init]
 	defaultBranch = main
 [commit]
