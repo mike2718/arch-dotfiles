@@ -15,3 +15,7 @@
 [http "https://github.com"]
 	sslVerify = false
 	proxy = http://127.0.0.1:7890
+[merge]
+	ff = false
+[pull]
+	ff = only
