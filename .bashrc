@@ -100,7 +100,7 @@ alias gsl='git stash list'
 alias gsu='git stash -u'
 alias gsp='git stash pop'
 
-alias lftp='lftp -u mike,123456 192.168.50.9'
+alias lftp='lftp -u mike,123456 192.168.31.2'
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias ping4='ping -4'
 alias ping6='ping -6'
