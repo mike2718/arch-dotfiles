@@ -1,3 +1,3 @@
-#!/usr/bin/bash
+#!/bin/bash
 sudo pacman -Syu
-sudo mkinitcpio -P
+#sudo mkinitcpio -P

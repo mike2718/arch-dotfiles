@@ -8,6 +8,7 @@
 
 # 生成5个数字或字母的密码
 for i in {1..5}; do
-    head /dev/random | tr -dc '[:alnum:]' | head -c10
+#    head /dev/random | tr -dc '[:alnum:]' | head -c10
+    head /dev/random | tr -dc '[:graph:]' | head -c10
     echo
 done
