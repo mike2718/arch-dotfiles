@@ -1,4 +1,5 @@
-#!/usr/bin/bash
+#!/bin/bash
+#
 sudo systemctl stop smb
 sudo systemctl stop transmission
 sudo systemctl stop syncthing@mike.service
