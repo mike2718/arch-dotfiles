@@ -4,7 +4,7 @@
 #. /usr/share/clang/bash-autocomplete.sh
 
 #PATH="/home/mike/amule/bin:/home/mike/bin:/usr/local/bin:${PATH}"
-PATH="/home/mike/amule/bin:/home/mike/bin:${PATH}"
+PATH="/home/mike/amule/bin:/home/mike/.local/bin:/home/mike/bin:${PATH}"
 
 LD_LIBRARY_PATH="/home/mike/dev/wxWidgets-3.0.5/lib:/usr/local/lib:${LD_LIBRARY_PATH}"
 
