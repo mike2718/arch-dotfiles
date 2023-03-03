@@ -10,5 +10,4 @@
 .gnupg/
 .cache/
 .local/
-.config/
 tmp/
