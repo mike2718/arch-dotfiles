@@ -13,7 +13,7 @@ export LANG
 
 TERM="xterm-256color"
 
-#export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CONFIG_HOME="${HOME}/.config"
 #export GOPATH="${XDG_DATA_HOME}/go"
 
 #TZ='Asia/Shanghai'; export TZ
