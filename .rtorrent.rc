@@ -32,9 +32,20 @@ network.port_random.set = no
 
 ## Tracker-less torrent and UDP tracker support
 ## (conservative settings for 'private' trackers, change for 'public')
-dht.mode.set = auto
+dht.mode.set = on
 dht.port.set = 56881
+#schedule2 = dht_node, 10, 0, "dht.add_node=dht.libtorrent.org:25401"
+#schedule2 = dht_node, 10, 0, "dht.add_node=dht.transmissionbt.com"
+#schedule2 = dht_node, 10, 0, "dht.add_node=router.utorrent.com"
 protocol.pex.set = yes
+# Default tracker
+method.insert = d.add_tracker, simple|private, "d.tracker.insert=\"10\", \"udp://tracker.opentrackr.org:1337/announce\""
+# Default DHT node
+method.insert = d.add_node, simple|private, "dht.add_node=dht.libtorrent.org:25401"
+# Add default tracker to new torrents
+method.set_key = event.download.inserted_new, tracker_insert, ((d.add_tracker))
+# Schedule addition of default dht node
+schedule2 = dht_add_node, 15, 0, ((d.add_node))
 
 trackers.use_udp.set = yes
 
