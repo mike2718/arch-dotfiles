@@ -49,6 +49,8 @@ schedule2 = dht_node, 10, 0, "dht.add_node=router.utorrent.com"
 
 trackers.use_udp.set = yes
 
+throttle.global_down.max_rate.set_kb = 0
+throttle.global_up.max_rate.set_kb = 300
 
 ## Peer settings
 throttle.max_uploads.set = 100
