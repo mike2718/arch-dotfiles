@@ -1,21 +1,24 @@
 #!/bin/bash
 rm -f /share/backup/amule-files.tar.xz
-cd /home/mike/.aMule
-tar -Jcvf /share/backup/amule-files.tar.xz  \
-amule.conf \
-clients.met \
-cryptkey.dat \
-emfriends.met \
-GeoIP.dat \
-ipfilter.dat \
-ipfilter_static.dat \
-key_index.dat \
-known.met \
-known2_64.met \
-load_index.dat \
-nodes.dat \
-preferences.dat \
-preferencesKad.dat \
-server.met \
-shareddir.dat \
-src_index.dat
+cd /home/mike
+tar -Jcvf /share/backup/amule-files.tar.xz \
+.aMule/amule.conf \
+.aMule/canceled.met \
+.aMule/clients.met \
+.aMule/cryptkey.dat \
+.aMule/emfriends.met \
+.aMule/GeoIP.dat \
+.aMule/ipfilter.dat \
+.aMule/ipfilter_static.dat \
+.aMule/key_index.dat \
+.aMule/known.met \
+.aMule/known2_64.met \
+.aMule/load_index.dat \
+.aMule/nodes.dat \
+.aMule/preferences.dat \
+.aMule/preferencesKad.dat \
+.aMule/server.met \
+.aMule/staticservers.dat \
+.aMule/shareddir.dat \
+.aMule/src_index.dat
+
