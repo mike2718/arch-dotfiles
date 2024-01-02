@@ -16,10 +16,15 @@ complete -cf sudo
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
-export HISTTIMEFORMAT='%F %T '
-export HISTCONTROL=erasedups
-export HISTSIZE=20000
-export PROMPT_COMMAND='history -a; history -c; history -r' # 履歴のリアルタイム反映
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export HISTTIMEFORMAT="%F %T "
+#export HISTCONTROL=ignoreboth
+export HISTCONTROL=ignoredups:erasedups
+#export PROMPT_COMMAND="history -a; history -c; history -r"
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+shopt -s histappend
+
 
 # Disable Ctrl+z in terminal
 trap "" SIGTSTP
@@ -43,7 +48,6 @@ alias s='sync'
 alias e='exit'
 alias a='awk'
 alias g='grep'
-alias rm='rm -I'
 alias bc='bc -ql'
 alias cp='rsync --archive --compress -hh --info=stats1,progress2 --modify-window=1'
 #alias mv='rsync --archive --compress -hh --info=stats1,progress2 --modify-window=1 --remove-source-files'
@@ -112,7 +116,12 @@ alias diff='diff -rauN --color=auto'
 #alias diff='git diff --no-index --color-words'
 alias ip='ip --color=auto'
 alias fdisk='fdisk --color'
-alias curl='curl --remove-on-error'
+alias sudo='sudo '
+alias rm='rm -Iv'
+alias mv='mv -iv'
+alias ln='ln -iv'
+alias free='free -h'
+
 
 # gnupg
 GPG_TTY=$(tty)
@@ -124,6 +133,8 @@ function path(){
     printf "%s\n" $PATH
     IFS=$old
 }
+
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 umask 022
 
