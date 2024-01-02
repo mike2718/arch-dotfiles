@@ -130,11 +130,51 @@ export GPG_TTY
 function path(){
     old=$IFS
     IFS=:
-    printf "%s\n" $PATH
+    printf "%s\n" "$PATH"
     IFS=$old
 }
 
+PATH="/home/mike/amule/bin:/home/mike/.local/bin:/home/mike/bin:${PATH}"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
+
+LANG=en_US.UTF-8
+
+TERM="xterm-256color"
+
+#GOPATH="${XDG_DATA_HOME}/go"
+
+TZ="Asia/Shanghai"
+
+export VISUAL="/usr/bin/vim"
+export SUDO_EDITOR="/usr/bin/vim"
+export PAGER="/usr/bin/less"
+export LESS='-R --use-color -Dd+r$Du+b'
+
+#[ -n "$DISPLAY" ] && export EDITOR="/usr/bin/scite" || export EDITOR="/usr/bin/vim"
+if [ -n "$DISPLAY" ]; then
+    export EDITOR="/usr/bin/scite"
+else
+    export EDITOR="/usr/bin/vim"
+fi
+#[ -n "$DISPLAY" ] && export BROWSER=firefox || export BROWSER=links
+if [ -n "$DISPLAY" ]; then
+    BROWSER=firefox
+    export BROWSER
+else
+    BROWSER=links
+    export BROWSER
+fi
+
+# rar默认压缩参数
+#RAR='-m5 -rr5 -s -md64 -ol'
+
+# curl的代理只用这些环境变量
+#export http_proxy="http://127.0.0.1:7890"
+#export HTTPS_PROXY="http://127.0.0.1:7890"
+# 其他代理
+#export https_proxy="http://127.0.0.1:7890"
+#export HTTP_PROXY="${http_proxy}"
+
 
 umask 022
 
