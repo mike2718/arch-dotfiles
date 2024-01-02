@@ -137,11 +137,7 @@ function path(){
 PATH="/home/mike/amule/bin:/home/mike/.local/bin:/home/mike/bin:${PATH}"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
-LANG=en_US.UTF-8
-
-TERM="xterm-256color"
-
-#GOPATH="${XDG_DATA_HOME}/go"
+LANG="en_US.UTF-8"
 
 TZ="Asia/Shanghai"
 
