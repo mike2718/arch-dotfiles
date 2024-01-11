@@ -6,6 +6,9 @@
 # 生成微信/支付宝密码
 # head /dev/random | tr -dc '[:digit:]' | head -c6
 
+# 生成MDC ID
+#head /dev/random | tr -dc 'a-f0-9' | head -c4
+
 # 生成5个数字或字母的密码
 for i in {1..5}; do
     head /dev/random | tr -dc '[:alnum:]' | head -c10

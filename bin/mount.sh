@@ -12,5 +12,5 @@ sudo systemctl restart lighttpd
 sudo systemctl restart rtorrent@mike
 sudo systemctl restart syncthing@mike.service
 sudo systemctl restart smb
-#amuled -f
+amuled -f
 

@@ -5,9 +5,7 @@
 [[ $- != *i* ]] && return
 
 #### 以下自己添加
-PS1="\[\033[38;5;66m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;96m\]\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;65m\]\w\[$(tput sgr0)\] (\[$(tput sgr0)\]\[\033[38;5;208m\]\$?\[$(tput sgr0)\]) \\$ \[$(tput sgr0)\]"
-#PS1="`printf "%${COLUMNS}s\n" "$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/') $(\date +'%-Y/%-m/%-d %-H:%M')"`$PS1"
-export PS1
+export PS1='\[\e[38;5;66m\]\u\[\e[0m\]@\[\e[38;5;96m\]\h \[\e[38;5;65m\]\w \[\e[0m\](\[\e[38;5;178m\]$?\[\e[0m\]) \$ '
 
 # tab自动完成文件名和命令
 complete -cf sudo
@@ -134,35 +132,29 @@ function path(){
     IFS=$old
 }
 
-PATH="/home/mike/amule/bin:/home/mike/.local/bin:/home/mike/bin:${PATH}"
+PATH="/home/mike/.local/bin:/home/mike/bin:${PATH}"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
-LANG="en_US.UTF-8"
+LANG=en_US.UTF-8
 
-TZ="Asia/Shanghai"
+TZ='Asia/Shanghai'
 
-export VISUAL="/usr/bin/vim"
-export SUDO_EDITOR="/usr/bin/vim"
-export PAGER="/usr/bin/less"
-export LESS='-R --use-color -Dd+r$Du+b'
+VISUAL="/usr/bin/vim"
+SUDO_EDITOR="/usr/bin/vim"
+PAGER="/usr/bin/less"
+LESS='-R --use-color -Dd+r$Du+b'
 
-#[ -n "$DISPLAY" ] && export EDITOR="/usr/bin/scite" || export EDITOR="/usr/bin/vim"
 if [ -n "$DISPLAY" ]; then
-    export EDITOR="/usr/bin/scite"
+    EDITOR="/usr/bin/scite"
 else
-    export EDITOR="/usr/bin/vim"
+    EDITOR="/usr/bin/vim"
 fi
-#[ -n "$DISPLAY" ] && export BROWSER=firefox || export BROWSER=links
+
 if [ -n "$DISPLAY" ]; then
     BROWSER=firefox
-    export BROWSER
 else
     BROWSER=links
-    export BROWSER
 fi
-
-# rar默认压缩参数
-#RAR='-m5 -rr5 -s -md64 -ol'
 
 # curl的代理只用这些环境变量
 #export http_proxy="http://127.0.0.1:7890"
@@ -170,7 +162,6 @@ fi
 # 其他代理
 #export https_proxy="http://127.0.0.1:7890"
 #export HTTP_PROXY="${http_proxy}"
-
 
 umask 022
 
