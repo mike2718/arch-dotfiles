@@ -90,7 +90,7 @@ alias gsl='git stash list'
 alias gsu='git stash -u'
 alias gsp='git stash pop'
 alias lftp='lftp -u mike,123456 192.168.31.2'
-alias vi='vim'
+alias vi='nvi'
 
 # gpg
 alias gpglk='gpg --list-keys --keyid-format=long'
