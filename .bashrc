@@ -114,7 +114,7 @@ alias diff='diff -rauN --color=auto'
 #alias diff='git diff --no-index --color-words'
 alias ip='ip --color=auto'
 alias fdisk='fdisk --color'
-alias sudo='sudo '
+#alias sudo='sudo '
 alias rm='rm -I'
 alias mv='mv -i'
 alias ln='ln -i'
@@ -132,7 +132,7 @@ function path(){
     IFS=$old
 }
 
-export PATH="/home/mike/amule/bin:/home/mike/.local/bin:/home/mike/bin:${PATH}"
+export PATH="/home/mike/.local/bin:/home/mike/bin:${PATH}"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 export LANG=en_US.UTF-8
