@@ -132,19 +132,19 @@ function path(){
     IFS=$old
 }
 
-PATH="/home/mike/.local/bin:/home/mike/bin:${PATH}"
+export PATH="/home/mike/amule/bin:/home/mike/.local/bin:/home/mike/bin:${PATH}"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
-LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
-TZ='Asia/Shanghai'
+export TZ='Asia/Shanghai'
 
-VISUAL="/usr/bin/vim"
-EDITOR="/usr/bin/vim"
-SUDO_EDITOR="/usr/bin/vim"
-PAGER="/usr/bin/less"
-LESS='-R --use-color -Dd+r$Du+b'
-BROWSER=w3m
+export VISUAL="/usr/bin/vim"
+export EDITOR="/usr/bin/vim"
+export SUDO_EDITOR="/usr/bin/vim"
+export PAGER="/usr/bin/less"
+export LESS='-R --use-color -Dd+r$Du+b'
+export BROWSER=w3m
 
 # curl的代理只用这些环境变量
 #export http_proxy="http://127.0.0.1:7890"
