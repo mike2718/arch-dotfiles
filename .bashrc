@@ -115,9 +115,9 @@ alias diff='diff -rauN --color=auto'
 alias ip='ip --color=auto'
 alias fdisk='fdisk --color'
 alias sudo='sudo '
-alias rm='rm -Iv'
-alias mv='mv -iv'
-alias ln='ln -iv'
+alias rm='rm -I'
+alias mv='mv -i'
+alias ln='ln -i'
 alias free='free -h'
 
 
