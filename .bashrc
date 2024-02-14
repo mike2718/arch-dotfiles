@@ -140,21 +140,11 @@ LANG=en_US.UTF-8
 TZ='Asia/Shanghai'
 
 VISUAL="/usr/bin/vim"
+EDITOR="/usr/bin/vim"
 SUDO_EDITOR="/usr/bin/vim"
 PAGER="/usr/bin/less"
 LESS='-R --use-color -Dd+r$Du+b'
-
-if [ -n "$DISPLAY" ]; then
-    EDITOR="/usr/bin/scite"
-else
-    EDITOR="/usr/bin/vim"
-fi
-
-if [ -n "$DISPLAY" ]; then
-    BROWSER=firefox
-else
-    BROWSER=links
-fi
+BROWSER=w3m
 
 # curl的代理只用这些环境变量
 #export http_proxy="http://127.0.0.1:7890"
