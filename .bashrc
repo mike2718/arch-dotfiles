@@ -146,7 +146,7 @@ export PAGER="/usr/bin/less"
 export LESS='-R --use-color -Dd+r$Du+b'
 export BROWSER=w3m
 
-export TERM=xterm-color
+#export TERM=xterm-color
 # curl的代理只用这些环境变量
 #export http_proxy="http://127.0.0.1:7890"
 #export HTTPS_PROXY="http://127.0.0.1:7890"
