@@ -4,5 +4,5 @@
 
 ```
 mike@raspberrypi ~ (0) $ uname -mrs
-Linux 6.2.10-1-aarch64-ARCH aarch64
+Linux 6.1.77-v8-SAORI_ISIKAWA+ aarch64
 ```
