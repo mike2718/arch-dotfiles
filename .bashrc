@@ -135,8 +135,6 @@ function path(){
 export PATH="/home/mike/.local/bin:/home/mike/bin:${PATH}"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
-export LANG=en_US.UTF-8
-
 export TZ='Asia/Shanghai'
 
 export VISUAL="/usr/bin/vim"
