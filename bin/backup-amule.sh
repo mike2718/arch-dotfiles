@@ -1,7 +1,6 @@
 #!/bin/bash
-rm -f /share/backup/amule-files.tar.xz
-cd /home/mike
-tar -Jcvf /share/backup/amule-files.tar.xz \
+rm -f ~/amule-files.tar.xz
+tar -Jcvf ~/amule-files.tar.xz \
 .aMule/amule.conf \
 .aMule/canceled.met \
 .aMule/clients.met \
