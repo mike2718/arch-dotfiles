@@ -2,6 +2,7 @@
 rm -f ~/amule-files.tar.xz
 tar -Jcvf ~/amule-files.tar.xz \
 .aMule/amule.conf \
+.aMule/addresses.dat \
 .aMule/canceled.met \
 .aMule/clients.met \
 .aMule/cryptkey.dat \

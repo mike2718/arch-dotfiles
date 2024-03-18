@@ -132,7 +132,7 @@ function path(){
     IFS=$old
 }
 
-export PATH="/home/mike/.local/bin:/home/mike/bin:${PATH}"
+export PATH="/home/mike/amule/bin:/home/mike/.local/bin:/home/mike/bin:${PATH}"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 export TZ='Asia/Shanghai'
