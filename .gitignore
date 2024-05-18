@@ -9,7 +9,6 @@
 .cache/
 .local/
 tmp/
-bin/
 dev/
 ncftp/
 links/
